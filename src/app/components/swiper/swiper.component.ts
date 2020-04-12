@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SwiperConfigInterface} from 'ngx-swiper-wrapper';
-
-
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-swiper',
@@ -11,7 +9,7 @@ import {SwiperConfigInterface} from 'ngx-swiper-wrapper';
 export class SwiperComponent implements OnInit {
   index = 0;
   imgs: Array<string> = [
-      '../../../assets/imgs/1.jpg',
+    '../../../assets/imgs/1.jpg',
     '../../../assets/imgs/2.jpg',
     '../../../assets/imgs/3.jpg',
     '../../../assets/imgs/4.jpg',
@@ -20,11 +18,12 @@ export class SwiperComponent implements OnInit {
   ];
   config: SwiperConfigInterface = {
     direction: 'horizontal',
-    slidesPerView: 'auto'
+    slidesPerView: 'auto',
+    autoplay: true,
+/*    loop: true*/
   };
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
-
 }

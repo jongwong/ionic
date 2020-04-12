@@ -1,8 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      首页
-    </ion-title>
+    <ion-buttons slot="start">
+      <img src="../../assets/qrcode.png" />
+    </ion-buttons>
+    <div class="searchbar-container">
+      <ion-searchbar placeholder="请输入关键词" animated></ion-searchbar>
+    </div>
+
+    <ion-buttons slot="end" class="message">
+      <img src="../../assets/message.png" />
+      <ion-badge color="danger" class="badge">8</ion-badge>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -14,4 +22,30 @@
   </ion-header>
 
   <app-swiper></app-swiper>
+
+  <div class="index-banner">
+    <div>
+      <img src="../../assets/banner/banner1.gif" />
+    </div>
+    <div>
+      <div class="index-banner-left">
+        <img src="../../assets/banner/banner2.png" />
+      </div>
+      <div class="index-banner-right">
+        <img src="../../assets/banner/banner3.png" />
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="hot-product-header">
+      <div class="hot-product-left">热卖商品</div>
+      <div class="hot-product-right">更多></div>
+    </div>
+    <div class="hot-product-list">
+      <div class="hot-product-list-item" *ngFor="let img of  listimgs">
+        <img [src]="img" />
+      </div>
+    </div>
+  </div>
 </ion-content>
